@@ -1,20 +1,44 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { 
+  StyleSheet, 
+  Text, 
+  View,
+  Image} from 'react-native';
 
+import IllustrationImg from '../../assets/illustration.png';
+
+import { ButtonIcon } from '../../componentes/ButtonIcon';
+
+import { styles } from './styles';
 
 export default function SignIn() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
+      <Image
+        source={IllustrationImg}
+        style={styles.image}
+        resizeMode='stretch'/>
+
+      <View style={styles.content}>
+        <Text style={styles.title}>
+          Organize{`\n`}
+          suas jogatinas{`\n`}
+          facilmente
+          </Text>
+
+          <Text style={styles.subtitle}>
+          Crie grupos para jogar seus games{`\n`}
+          favoritos com seus amigos
+          </Text>
+      </View>
+
+      <ButtonIcon 
+        title="Entrar com Discord"
+        activeOpacity={.7}/>
+
     </View>
   );
 }
 
-const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      backgroundColor: 'red',
-      alignItems: 'center',
-      justifyContent: 'center',
-    },
-  });
+
+
